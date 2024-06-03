@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+p,
+h2 {
+    margin: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+.box {
+    display: none;
+    background-color:rgb(240, 233, 233);
+    min-height: calc(100vh - 110px);
+}
+.newstore {
+    .left {
+        .left-desktop {
+            padding: 0 20px;
+            color: white;
+            background-color: black;
+            .header {
+                position: relative;
+                height: 70px;
+                border-bottom: 1px solid grey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .icon {
+                    position: absolute;
+                    border-radius: 50%;
+                    background-color: red;
+                    padding: 3px 8px;
+                    right: -20px;
+                    transform: translateX(50%);
+                    top: calc(50% - 15px);
+                    
+                }
+            }
+
+            .content {
+                display: flex;
+                align-items: center;
+                padding: 20px 0;
+
+                p {
+                    margin-left: 20px;
+                }
+            }
+
+            h6 {
+                border-bottom: 1px solid grey;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .right {
+        width: 100%;
+        .Navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            height: 70px;
+        }
+
+        .navbar-start i {
+            margin: 0 20px;
+            font-size: 20px;
+            color: #333;
+        }
+        .main-header {
+            height: 40px;
+        }
+    }
+
+    .navbar-end {
+        display: flex;
+        align-items: center;
+
+        .flag-icon {
+            width: 55px;
+            height: 40px;
+            background-image: url('https://i.pinimg.com/564x/38/20/70/3820701d809358ec43997f5f1c6ca610.jpg');
+            background-size: cover;
+            margin: 0 10px;
+        }
+
+        .cicle-icon {
+            width: 40px;
+            height: 40px;
+            background-image: url('https://i.pinimg.com/564x/71/8f/f6/718ff6598b0a6fa777d2fd7b594d2bac.jpg');
+            background-size: cover;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+    }
+    .box {
+        .card {
+            p {
+                background-color: red;
+                border-radius: 50%;
+                width: 32px;
+                height: 32px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .card-img {
+                width: 60%;
+                margin: 0 auto;
+            }
+            .card-body {
+                display: flex;
+                justify-content: space-around;               
+            }
+            }
+            .box-top {
+                display: flex;
+                justify-content: space-between;
+                i {
+                    font-size: 25px;
+                    color: rgb(104, 4, 104);
+                }
+            }
+            h6 {
+                text-align: center;
+                color: rgb(104, 4, 104);
+            }
+            .box-end {
+              
+                i {
+                    color: rgb(104, 4, 104);
+                }
+            }
+        }
+
+}
+
+
+/* laptop */
+@media screen and (min-width : 741px) {
+    .newstore {
+        display: flex;
+        .left {
+            .left-desktop {             
+                height: 100vh;
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width:740px) {
+    .newstore {
+        .left {
+            .left-desktop {             
+                .header {
+
+                    .icon {
+                        right: 10px;
+                    }
+                }
+                .menu-store {
+                    display: none;
+                }
+            }
+        }
+    }
+}
