@@ -35,4 +35,7 @@ var listdish = document.getElementById("listdish");
                       </tfoot>`;
 }
 
-
+// reset after paypill
+function paybill () {
+  
+}

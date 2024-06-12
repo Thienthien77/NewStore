@@ -24,6 +24,7 @@ document.querySelector(".btn-order").addEventListener("click", () => {
     var food = document.querySelectorAll(".food .col");
   
     var menu = [];
+
      food.forEach(element => {
          const quantity = parseInt(element.querySelector(".quantity-food").value);
           if ( quantity > 0) {
@@ -36,7 +37,7 @@ document.querySelector(".btn-order").addEventListener("click", () => {
      })
       if(menu.length > 0) {
   
-        const order =   {
+        const order = {
           "idTables": idTable,
           "item" : menu
         }
