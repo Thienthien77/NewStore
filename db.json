@@ -1,0 +1,292 @@
+{
+  "tables": [
+    {
+      "id": "1",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "2",
+      "customerName": "test2",
+      "quantity": "2",
+      "status": false
+    },
+    {
+      "id": "3",
+      "customerName": "test3",
+      "quantity": "3",
+      "status": false
+    },
+    {
+      "id": "4",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "5",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "6",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "7",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "8",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "9",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "10",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "11",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "12",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "13",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "14",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "15",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "16",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "17",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "18",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    },
+    {
+      "id": "19",
+      "customerName": "",
+      "quantity": 0,
+      "status": false
+    },
+    {
+      "id": "20",
+      "customerName": "",
+      "quantity": 0,
+      "status": true
+    }
+  ],
+  "food": [
+    {
+      "id": "1",
+      "name": "Hamberger",
+      "img": "../img/Hamberger.png",
+      "price": 39
+    },
+    {
+      "id": "2",
+      "name": "BeefSteak",
+      "img": "../img/Best Steak.png",
+      "price": 129
+    },
+    {
+      "id": "3",
+      "name": "Dimsum",
+      "img": "../img/Dimsum.png",
+      "price": 79
+    },
+    {
+      "id": "4",
+      "name": "Fried Chicken",
+      "img": "../img/Fried Chicken.png",
+      "price": 119
+    },
+    {
+      "id": "5",
+      "name": "Pizza",
+      "img": "../img/pizza.png",
+      "price": 79
+    },
+    {
+      "id": "6",
+      "name": "Sallad",
+      "img": "../img/Sallad.png",
+      "price": 49
+    },
+    {
+      "id": "7",
+      "name": "Spaghetti",
+      "img": "../img/Spaghetti.jpg",
+      "price": 129
+    },
+    {
+      "id": "8",
+      "name": "Seafood Noodles",
+      "img": "../img/Seafoodnoodles.jpg",
+      "price": 179
+    },
+    {
+      "id": "9",
+      "name": "Mixed Rice",
+      "img": "../img/Mixedrice.jpg",
+      "price": 99
+    },
+    {
+      "id": "10",
+      "name": "Fried Noodles",
+      "img": "../img/Friednoodles.jpg",
+      "price": 119
+    },
+    {
+      "id": "11",
+      "name": "Veg Rice",
+      "img": "../img/Vegrice.jpg",
+      "price": 99
+    },
+    {
+      "id": "12",
+      "name": "Pad Thai",
+      "img": "../img/PadThai.jpg",
+      "price": 79
+    }
+  ],
+  "orders": [
+    {
+      "id": "4bba",
+      "idTables": "1",
+      "item": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        },
+        {
+          "idFood": "2",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "24c3",
+      "idTables": "4",
+      "item": [
+        {
+          "idFood": "11",
+          "quantity": 1
+        },
+        {
+          "idFood": "12",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "8e4c",
+      "idTables": "1",
+      "item": [
+        {
+          "idFood": "6",
+          "quantity": 1
+        },
+        {
+          "idFood": "7",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "2957",
+      "idTables": "Choose a table",
+      "item": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "0808",
+      "idTables": "1",
+      "item": [
+        {
+          "idFood": "1",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "1e2d",
+      "idTables": "Choose a table",
+      "item": [
+        {
+          "idFood": "1",
+          "quantity": 3
+        }
+      ]
+    },
+    {
+      "id": "8142",
+      "idTables": "1",
+      "item": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "da49",
+      "idTables": "4",
+      "item": [
+        {
+          "idFood": "1",
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,1 @@
-du an
+npx json-server db.json

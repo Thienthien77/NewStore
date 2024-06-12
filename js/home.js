@@ -22,7 +22,7 @@ icon.addEventListener("click", () => {
 content.forEach((element,index) => {
     element.addEventListener("click", () => {
         content.forEach(element => element.style.color = "white");
-        element.style.color = "red";
+        element.style.color = "black";
         boxs.forEach(element => element.style.display = "none");     
         boxs[index].style.display = "block";
         title.innerText = array[index];
