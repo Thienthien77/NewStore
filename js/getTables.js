@@ -62,20 +62,8 @@ document.getElementById("btn--booking").addEventListener("click", () => {
       "quantity": quantity,
       "status": true
     }
-    fetch(`http://localhost:3000/tables/${idEdit}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(tableNew),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-  
-      })
-      .catch(error => console.error('Error creating post:', error));
-  
+
+    edit(urlTable,idEdit,tableNew);
   
   })
 

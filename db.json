@@ -8,8 +8,8 @@
     },
     {
       "id": "2",
-      "customerName": "test2",
-      "quantity": "2",
+      "customerName": "",
+      "quantity": 0,
       "status": false
     },
     {
@@ -197,18 +197,29 @@
   ],
   "orders": [
     {
-      "id": "39e2",
-      "idTables": "1",
-      "item": [
+      "id": "1",
+      "items": [
         {
           "idFood": "1",
-          "quantity": 1
+          "quantity": 2
         },
         {
           "idFood": "2",
-          "quantity": 1
+          "quantity": 2
+        },
+        {
+          "idFood": "3",
+          "quantity": 2
         }
       ]
+    }
+  ],
+  "bills": [
+    {
+      "id": "f5c4",
+      "idTable": "2",
+      "totalAmount": 475,
+      "time": "2024-06-14T13:36:35.479Z"
     }
   ]
 }
