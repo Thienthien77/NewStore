@@ -14,10 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Add this script tag to your HTML file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -44,7 +43,7 @@
                     </div>
                     <div class="content">
                         <i class="fa-solid fa-utensils"></i>
-                        <p class="hidden">ORDER FOOD</p>                       
+                        <p class="hidden">ORDER FOOD</p>
                     </div>
                     <div class="content">
                         <i class="fa-solid fa-credit-card"></i>
@@ -59,7 +58,7 @@
         </div>
         <div class="right">
             <div class="right-desktop">
-                <div class="Navbar shadow">
+                <div class="Navbar">
                     <div class="navbar-start">
                         <i class="fas fa-search"></i>
                         <i class="fas fa-bell"></i>
@@ -69,74 +68,149 @@
                         <div class="flag-icon"></div>
                         <div class="cicle-icon" data-bs-toggle="dropdown" aria-expanded="false">
                             <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item " href="#">My Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Notification</a></li>
+                                <li><a class="dropdown-item " id="username" href="#">Username</a></li>
+                                <li><a class="dropdown-item" href="#">My Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Setting</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" id="logout" href="Login.html">Logout</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="main-right">
-                     <div class="main-header">
-                        <h5></h5>                   
-                     </div>
+                <div class="main-right">           
                     <div class="box dashboard">
-                        <div class="banner">
-                            <img src="../img/grey green food menu banner (1).jpg" alt="">
-                        </div>
-                    </div>                
+                     <div class="container">
+                        <h4 class="text-center mt-3"> REVENUE CHART BY TABLE </h4>
+                        <div class="bar-chart"> </div>
+                        <div class="pie-chart mb-3"> </div>
+                     </div>
+                      
+                    </div>
                     <div class="box">
                         <div class="container">
                             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 tables">
-                              
-                              
+
+
                             </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="box">
                         <div class="container topbutton pt-3">
                             <label for=""> Choose a table</label>
-                            <select id="table_select" >
-                                <option disabled selected>Choose a table</table></Table></option>
-                               
-                              </select>
-                              <button class="btn-order" type="button" >Order</button>
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 food mt-2 pb-3">
+                            <select id="table_select">
+                                <option disabled selected>Choose a table</table>
+                                    </Table>
+                                </option>
+
+                            </select>
+                            <button class="btn-order" type="button">Order</button>
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 food mt-2 pb-3">
+                            </div>
                         </div>
-                      </div>
-                        
+
                     </div>
                     <div class="box paybill">
-                        <label for=""> Choose a table</label>
-                            <select id="paybill_select" onchange="changepaybill()" >
-                                <option disabled selected>Choose a table</table></Table></option>
-                               
-                              </select>
-                              <button class="btn-order paybill" type="button" onclick="paybill()" >Pay Bill</button>
-                              <div class="container">
+                        <div class="container mt-3">
+                            <label for=""> Choose a table</label>
+                            <select id="paybill_select" onchange="changepaybill()">
+                                <option disabled selected>Choose a table</table>
+                                    </Table>
+                                </option>
+    
+                            </select>
+                            <button class="btn-order paybill" type="button" onclick="paybill()">Pay Bill</button>
+                            <div class="container">
                                 <table class="table mt-3">
                                     <thead>
-                                      <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Image</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Quantity</th>
-                                        <th scope="col">Price</th>
-                                      </tr>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Image</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Price</th>
+                                        </tr>
                                     </thead>
                                     <tbody id="listdish">
-                                      
+    
                                     </tbody>
-                                  </table>
-                              </div>
-                            
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="box">
-                        <p> INFORMATION </p>
+                        <div class="container mt-3">
+                            <div class="row">
+                                <div class="col-12 col-xl-5">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Avatar
+                                        </div>
+                                        <div class="card-body">
+                                            <img class="rounded-circle"
+                                                src="https://i.pinimg.com/564x/59/ef/cd/59efcd76c12fbd5b95cd675ae39966d0.jpg"
+                                                style="height: 300px; width: 300px;" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-7">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            INFORMATION
+                                        </div>
+                                        <div class="card-body">
+                                            <form style="width: 100%;">
+                                                <div class="mb-3">
+                                                    <div class="row g-3">
+                                                        <div class="col">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="First name" aria-label="First name">
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Last name" aria-label="Last name">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Email
+                                                        address</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1"
+                                                        class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="row g-3">
+                                                        <div class="col">
+                                                            <input type="number" class="form-control"
+                                                                placeholder="Phone number" aria-label="First name">
+                                                        </div>
+                                                        <div class="col">
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <input type="file" class="form-control mt-3">
+                                                </div>
+                                                <div class="mb-3 text-center">
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
 
                 </div>
@@ -144,77 +218,74 @@
         </div>
     </div>
     <!-- Modal edit table -->
-    <div class="modal fade" id="bookingTable" data-bs-backdrop="static" data-bs-keyboard="false"
-    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel"> TABLE BOOKING </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Input -->
-                <div class="mb-3">
-                    <label class="form-label"> Customer Name</label>
-                    <input type="email" class="form-control" id="CustomerName"
-                        placeholder="Customer Name">
+    <div class="modal fade" id="bookingTable" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"> TABLE BOOKING </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="mb-3">
-                    <label class="form-label"> Quantity </label>
-                    <input type="number" class="form-control" id="quantity" placeholder="Quantity"
-                        max="10" min="0">
+                <div class="modal-body">
+                    <!-- Input -->
+                    <div class="mb-3">
+                        <label class="form-label"> Customer Name</label>
+                        <input type="email" class="form-control" id="CustomerName" placeholder="Customer Name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label"> Quantity </label>
+                        <input type="number" class="form-control" id="quantity" placeholder="Quantity" max="10" min="0">
+                    </div>
+                    <!--------->
                 </div>
-                <!--------->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                    data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="btn--booking">Gửi</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btn--booking">Gửi</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End modal -->
- <!-- Modal card -->
-<div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">List of ordered dishes</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- End modal -->
+    <!-- Modal card -->
+    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">List of ordered dishes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart">
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Pay bills</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Image</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Price</th>
-                  </tr>
-                </thead>
-                <tbody id="cart">
-                
-                 
-                </tbody>
-              </table>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Pay bills</button>
-        </div>
-      </div>
     </div>
-  </div>
-  <!-- End modal card -->
+    <!-- End modal card -->
     <script src="../js/order.js"></script>
     <script src="../js/home.js"></script>
     <script src="../js/getTables.js"></script>
     <script src="../js/getFood.js"></script>
     <script src="../js/payBill.js"></script>
     <script src="../js/api.js"></script>
+    <script src="../js/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>

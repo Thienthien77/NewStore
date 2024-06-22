@@ -6,10 +6,19 @@ var content = document.querySelectorAll(".left .content");
 var i = document.querySelectorAll(".icon i");
 var menu = document.querySelector(".menu-store");
 var boxs = document.querySelectorAll(".box");
-var array = ["DASHBOARD","RESERVATION","ORDER FOOD","PAY BILL","INFORMATION"];
-var title = document.querySelector(".main-header h5");
+var userName = document.getElementById("username");
 
+ document.getElementById("logout").addEventListener("click", (e) => {
 
+       e.preventDefault();
+
+    window.location.href = "Login.html";
+ })
+
+var user = localStorage.getItem("account");
+var account = JSON.parse(user);
+
+userName.innerText = account.userName;
 
 icon.addEventListener("click", () => {
     p.forEach(element => element.classList.toggle("hidden"));
@@ -25,6 +34,6 @@ content.forEach((element,index) => {
         element.style.color = "black";
         boxs.forEach(element => element.style.display = "none");     
         boxs[index].style.display = "block";
-        title.innerText = array[index];
     })
 })
+

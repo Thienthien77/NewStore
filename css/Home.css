@@ -22,6 +22,7 @@ h2 {
     background-color: #fabadc;
     min-height: calc(100vh - 110px);
 }
+
 .newstore {
     .left {
         .left-desktop {
@@ -75,6 +76,7 @@ h2 {
             background-color: #fabadc;
             padding: 10px 20px;
             height: 70px;
+            border-bottom:1px solid gray;
         }
 
         .navbar-start i {
@@ -204,8 +206,11 @@ table {
             }
         }
         .right {
-            height: 100vh;
-            overflow-y: auto;
+             
+            .main-right {
+                height: calc(100vh - 70px);
+                overflow-y: auto;
+            }
         }
     }
 }
@@ -226,4 +231,17 @@ table {
             }
         }
     }
+}
+
+.food-img {
+    animation: thien 2s infinite ;
+}
+
+@keyframes thien {
+    from{
+        transform: scale(0) rotate(0);
+    }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
 }

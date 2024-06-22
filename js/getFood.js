@@ -27,8 +27,8 @@ function getFood() {
                  <h5>${element.name}</h5>
                  <i class="fa-solid fa-pen-to-square"></i>
              </div>
-               <div class="card-img">
-                 <img src="${element.img}" class="card-img-top animate__animated animate__fadeInBottomLeft" alt="...">
+               <div class="card-img food-img">
+                 <img src="${element.img}" class="card-img-top" alt="...">
                </div>
              <h6>$${element.price}</h6>
              <div class="box-end">

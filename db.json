@@ -4,7 +4,7 @@
       "id": "1",
       "customerName": "",
       "quantity": 0,
-      "status": true
+      "status": false
     },
     {
       "id": "2",
@@ -14,15 +14,15 @@
     },
     {
       "id": "3",
-      "customerName": "test3",
-      "quantity": "3",
+      "customerName": "",
+      "quantity": 0,
       "status": false
     },
     {
       "id": "4",
       "customerName": "",
       "quantity": 0,
-      "status": true
+      "status": false
     },
     {
       "id": "5",
@@ -34,7 +34,7 @@
       "id": "6",
       "customerName": "",
       "quantity": 0,
-      "status": true
+      "status": false
     },
     {
       "id": "7",
@@ -46,7 +46,7 @@
       "id": "8",
       "customerName": "",
       "quantity": 0,
-      "status": true
+      "status": false
     },
     {
       "id": "9",
@@ -64,61 +64,13 @@
       "id": "11",
       "customerName": "",
       "quantity": 0,
-      "status": true
+      "status": false
     },
     {
       "id": "12",
       "customerName": "",
       "quantity": 0,
-      "status": true
-    },
-    {
-      "id": "13",
-      "customerName": "",
-      "quantity": 0,
       "status": false
-    },
-    {
-      "id": "14",
-      "customerName": "",
-      "quantity": 0,
-      "status": true
-    },
-    {
-      "id": "15",
-      "customerName": "",
-      "quantity": 0,
-      "status": false
-    },
-    {
-      "id": "16",
-      "customerName": "",
-      "quantity": 0,
-      "status": false
-    },
-    {
-      "id": "17",
-      "customerName": "",
-      "quantity": 0,
-      "status": true
-    },
-    {
-      "id": "18",
-      "customerName": "",
-      "quantity": 0,
-      "status": true
-    },
-    {
-      "id": "19",
-      "customerName": "",
-      "quantity": 0,
-      "status": false
-    },
-    {
-      "id": "20",
-      "customerName": "",
-      "quantity": 0,
-      "status": true
     }
   ],
   "food": [
@@ -195,31 +147,55 @@
       "price": 79
     }
   ],
-  "orders": [
-    {
-      "id": "1",
-      "items": [
-        {
-          "idFood": "1",
-          "quantity": 2
-        },
-        {
-          "idFood": "2",
-          "quantity": 2
-        },
-        {
-          "idFood": "3",
-          "quantity": 2
-        }
-      ]
-    }
-  ],
+  "orders": [],
   "bills": [
     {
       "id": "f5c4",
       "idTable": "2",
       "totalAmount": 475,
       "time": "2024-06-14T13:36:35.479Z"
+    },
+    {
+      "id": "e001",
+      "idTable": "2",
+      "totalAmount": 307,
+      "time": "2024-06-19T12:35:22.883Z"
+    },
+    {
+      "id": "b6bb",
+      "idTable": "3",
+      "totalAmount": 208,
+      "time": "2024-06-19T12:37:40.517Z"
+    },
+    {
+      "id": "fe5d",
+      "idTable": "6",
+      "totalAmount": 426,
+      "time": "2024-06-19T13:16:41.702Z"
+    },
+    {
+      "id": "4b07",
+      "idTable": "7",
+      "totalAmount": 297,
+      "time": "2024-06-19T13:16:46.117Z"
+    },
+    {
+      "id": "f05a",
+      "idTable": "9",
+      "totalAmount": 129,
+      "time": "2024-06-19T13:18:25.539Z"
+    },
+    {
+      "id": "6bbd",
+      "idTable": "11",
+      "totalAmount": 693,
+      "time": "2024-06-19T13:18:29.914Z"
+    },
+    {
+      "id": "1e31",
+      "idTable": "1",
+      "totalAmount": 494,
+      "time": "2024-06-19T14:24:21.297Z"
     }
   ]
 }
